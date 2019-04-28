@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!--with 给模板传值-->
+<header th:include="layout::htmlhead" th:with="title=${title}"></header>
+<body>
+<!--引入模板-->
+<div th:include="layout::navbar"></div>
+<table class="table table-bordered">
+    <tr th:each="user:${userList}">
+        <td th:text="${user.userId}"/>
+        <td th:text="${user.userName}"/>
+        <td th:text="${user.password}"/>
+        <td th:text="${user.email}"/>
+    </tr>
+</table>
+<div th:include="layout::footer"></div>
+</body>
+</html>

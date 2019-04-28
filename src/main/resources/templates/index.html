@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<p>
+
+<div th:text="${name}">(---欢迎使用模板)</div>
+<p th:unless="${age>18}">张三还没满18岁</p>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+
+server:
+  port: 8080
+cn:
+  cxh:
+    key: zs
+    dis: 张三
+spring:
+  datasource:
+    url: jdbc:mysql://47.102.98.170/news?useSSL=false&characterEncoding=utf-8
+    driver-class-name: com.mysql.jdbc.Driver
+    username: xm1
+    password: xm1z
+
+    jpa:
+      properties:
+        hibernate:
+          hbm2ddl:
+            auto: update
+            dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+      show-sql: true  #开启显示自动创建的sql语句
+
+      hibernate:
+        naming:
+          physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl #防止字段名被自动拆为 user_name  在实体就可以使用驼峰userName
+  redis:
+    host: 47.102.134.167
+    port: 6379
+# 连接池最大连接数（使用负值表示没有限制） 默认 8
+    lettuce:
+      pool:
+        max-active: 300 # 连接池最大连接数（使用负值表示没有限制）
+        max-wait: 1   # 连接池最大阻塞等待时间（使用负值表示没有限制） 默认 -1
+        max-idle: 20   # 连接池中的最大空闲连接 默认 8
+        min-idle: 10  # 连接池中的最小空闲连接 默认 0
+    database: 1
+
+
+debug: true
