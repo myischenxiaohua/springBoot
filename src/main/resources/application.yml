@@ -4,7 +4,7 @@ server:
 cn:
   cxh:
     key: zs
-    dis: 张三
+    dis: 李四
 spring:
   datasource:
     url: jdbc:mysql://47.102.98.170/news?useSSL=false&characterEncoding=utf-8
