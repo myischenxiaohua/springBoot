@@ -28,4 +28,5 @@ public class NewsController {
         return  newsService.getNewsById(id);
     }
 
+
 }
